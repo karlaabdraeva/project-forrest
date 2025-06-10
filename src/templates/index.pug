@@ -1,7 +1,67 @@
 doctype html
-html
+html(lang='ru-RU')
   head
-    title Пример проекта
+    meta(charset='utf-8')
+    title Forrest
+    meta(name='viewport' content='width=device-width,initial-scale=1')
+    meta(name='keywords' content='')
+    link(rel='stylesheet' type='text/css' href='static/css/main.scss')
   body
-    h1 Привет, мир!
+    header.header
+      .header__container
+        .header__navigation
+          a.logo(href="index.pug")
+            span.logo__text FORREST
+          nav.nav
+            ul.nav__list
+              li.nav__item
+                a.nav__link(href='#') Услуги
+              li.nav__item
+                a.nav__link(href='#') Поддержка
+              li.nav__item
+                a.nav__link--current(href="index.pug" aria-current="page") Компания
+              li.nav__item
+                a.nav__link(href='#') Партнеры
+              li.nav__item
+                a.nav__link(href='#') Портфолио
+              li.nav__item
+                a.nav__link(href='#') Контакты
+          button.header__toggle.toggle-button(type="button")
+            span.visually-hidden Открыть меню
+    main.index__page
+      section.hero
+        .hero__image-container
+          picture
+            source(type="" srcset="")
+            source(type="" srcset="")
+            img(class="hero__img" src="" alt="")
+        .hero__container.container
+          h1.hero__title
+            | Превращаем окружение
+            br
+            |
+            span.hero__title-accent в живые сады
+          p.hero__subtitle Вертикальное озеленение для бизнеса. Преображаем бизнес центры,<br> ТЦ, отели, рестораны и другие коммерческие помещения.
+      section.concept.section-light
+        .concept__container.container
+          h2.concept__title.title
+            span.concept__title-accent Достаточно
+              | найти
+              br
+              | одну опорную стену
+            p.concept__title-text Вертикальное озеленение – это инновационный способ интеграции природы в городскую среду.
+            p.concept__title-description Эти живые конструкции, состоящие из растений, закреплённых на вертикальных поверхностях, не только преображают внешний вид зданий и интерьеров,<br> но и приносят ощутимую пользу: улучшают качество воздуха, снижают температуру окружающей среды, создают звукоизоляцию и, конечно, дарят<br> эстетическое удовольствие, превращая бетонные стены в цветущие оазисы.
+      section.support
+        .support__container.container
+          h3.support__title
+            span.support__title-accent Ежемесячная
+            br
+            | Поддержка от нас
+          p.support__subtitle Ежемесячно проверяем состояние растений,<br> бережно чистим от пыли и при необходимости<br> заменяем растения.
+          picture
+            source(type="" srcset="")
+            source(type="" srcset="")
+            img(class="support__img" src="" alt="")
+          a.consultation__link(href="#")
+            span.consultation__link-text Консультация
     script(src="bundle.js")

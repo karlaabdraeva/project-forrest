@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { watchFile } = require('fs');
 
 module.exports = {
   mode: 'development',
@@ -37,5 +38,7 @@ module.exports = {
   devServer: {
     static: './dist',
     hot: true,
+    open: true,
+    watchFiles: ['./src/**/*'],
   },
 };
