@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { watchFile } = require('fs');
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   mode: 'development',
@@ -22,7 +22,14 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        use: 'pug-loader',
+        use: [
+          {
+            loader: 'html-loader'
+          },
+          {
+            loader: 'pug-plain-loader'
+          }
+        ],
       },
       {
         test: /\.scss$/,
@@ -34,11 +41,20 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/templates/index.pug'
     }),
+    new CopyPlugin({
+      patterns: [
+        { from: "src/fonts", to: "fonts" },
+        { from: "src/images", to: "images" }
+      ],
+    }),
   ],
   devServer: {
-    static: './dist',
-    hot: true,
-    open: true,
-    watchFiles: ['./src/**/*'],
+    static: {
+      directory: path.join(__dirname, "dist")
+    },
+    compress: true,
+    port: 3000,
+    open: true
   },
+  mode: "development"
 };

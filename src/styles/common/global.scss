@@ -1,0 +1,20 @@
+@use "./variables.scss" as vars;
+
+body {
+  font-family: vars.$primary-font;
+  color: vars.$main-text-color;
+  background-color: vars.$brand-color-light;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  line-height: 124%;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}

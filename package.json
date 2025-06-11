@@ -12,10 +12,13 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "copy-webpack-plugin": "^13.0.0",
     "css-loader": "^7.1.2",
+    "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
+    "pug-plain-loader": "^1.1.0",
     "sass": "^1.89.1",
     "sass-loader": "^16.0.5",
     "style-loader": "^4.0.0",
