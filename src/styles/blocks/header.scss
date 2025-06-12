@@ -1,0 +1,40 @@
+@use "../common/variables.scss" as vars;
+
+.header {
+  position: fixed;
+  color: vars.$main-text-color;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 30px;
+  margin: 0;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.header__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 1 1 100%;
+}
+
+.header__logo-container {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header__logo {
+  display: flex;
+
+}

@@ -1,20 +1,21 @@
 doctype html
-html(lang='ru-RU')
+html.page(lang='ru-RU')
   head
     meta(charset='utf-8')
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Forrest
-    link(rel="preload" href="/fonts/Arial-Nova/Arial-Nova.woff2" as="font" type="font/woff2" crossorigin="anonymous")
-    link(rel="preload" href="/fonts/Cormorant-Garamond/cormorant-garamond-v20-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous")
-    link(rel="preload" href="/fonts/Cormorant-Garamond/cormorant-garamond-v20-cyrillic_latin-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous")
-    link(rel="preload" href="/fonts/Cormorant-Garamond/cormorant-garamond-v20-cyrillic_latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous")
-    link(rel="preload" href="/fonts/Cormorant-Garamond/cormorant-garamond-v20-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+    link(rel="preload" href="../fonts/Arial-Nova/Arial-Nova.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+    link(rel="preload" href="../fonts/Cormorant-Garamond/cormorant-garamond-v20-cyrillic_latin-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+    link(rel="preload" href="../fonts/Cormorant-Garamond/cormorant-garamond-v20-cyrillic_latin-italic.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+    link(rel="preload" href="../fonts/Cormorant-Garamond/cormorant-garamond-v20-cyrillic_latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous")
+    link(rel="preload" href="../fonts/Cormorant-Garamond/cormorant-garamond-v20-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous")
   body
     header.header
-      .header__container
+      .header__container.container
         .header__navigation
-          a.logo(href="index.pug")
-            span.logo__text FORREST
+          .header__logo-container
+            a.header__logo.logo(href="index.pug")
+              span.logo__text Forrest
           nav.nav
             ul.nav__list
               li.nav__item
@@ -22,7 +23,7 @@ html(lang='ru-RU')
               li.nav__item
                 a.nav__link(href='#') Поддержка
               li.nav__item
-                a.nav__link--current(href="index.pug" aria-current="page") Компания
+                a.nav__link.nav__link--current(href="index.pug" aria-current="page") Компания
               li.nav__item
                 a.nav__link(href='#') Партнеры
               li.nav__item
@@ -36,8 +37,8 @@ html(lang='ru-RU')
         .hero__image-container
           picture
             source(type="image/webp" srcset="../images/hero-background2x.webp")
-            source(type="image/jpeg" srcset="../images/hero-background2x.jpeg")
-            img(class="hero__img" src="../images/hero-background2x.jpeg" alt="Вид из окна" width="1920" height="800")
+            source(type="image/jpeg" srcset="../images/hero-background2x.jpg")
+            img(class="hero__img" src="../images/hero-background2x.jpg" alt="Вид из окна" width="1920" height="800")
         .hero__container.container
           h1.hero__title
             | Превращаем окружение
@@ -48,7 +49,7 @@ html(lang='ru-RU')
       section.concept.section-light
         .concept__container.container
           h2.concept__title.title
-            span.concept__title-accent Достаточно
+            span.concept__title-accent.concept__title-accent--italic Достаточно
               |  найти
               br
               |  одну опорную стену
@@ -67,4 +68,3 @@ html(lang='ru-RU')
             source(type="image/webp" srcset="../images/balcony-support2x.webp")
             source(type="image/webp" srcset="../images/balcony-support2x.jpg")
             img(class="support__img" src="../images/balcony-support2x.jpg" alt="Фото балконов с растениями" width="960" height="700")
-    script(src="bundle.js")

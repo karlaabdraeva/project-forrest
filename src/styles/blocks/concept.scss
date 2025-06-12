@@ -1,0 +1,38 @@
+@use "../common/variables.scss" as vars;
+
+.concept__container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 187px 1546px 187px;
+  grid-template-rows: repeat(3, min-content);
+}
+
+.concept__title {
+  display: grid;
+  grid-template-columns: 763px 763px;
+  grid-template-rows: repeat(3, min-content);
+  align-items: center;
+  grid-area: 2 / 2 / 3 / 2;
+}
+
+.concept__title-accent {
+  grid-area: 1 / 1 / 4 / 3;
+  font-family: vars.$secondary-font;
+  font-weight: 500;
+  line-height: 1.3;
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: -2;
+
+  &__title-accent--italic {
+    font-style: italic;
+  }
+}
+
+.concept__title-text {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.concept__title-description {
+  grid-area: 3 / 2 / 4 / 3;
+}

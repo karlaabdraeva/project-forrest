@@ -1,0 +1,32 @@
+@use "../common/variables.scss" as vars;
+
+.header__toggle {
+  border-radius: 4px;
+  background-color: vars.$brand-color-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-button {
+  border: none;
+  width: 50px;
+  height: 45px;
+  cursor: pointer;
+  margin-left: 286px;
+  background-image: url("../icons/light-burger-icon.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  background-position: center;
+
+  &--dark {
+      background-image: url("../icons/dark-burger-icon.svg");
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.6;
+  }
+}
