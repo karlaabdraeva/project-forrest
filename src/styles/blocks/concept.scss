@@ -5,6 +5,8 @@
   align-items: center;
   grid-template-columns: 187px 1546px 187px;
   grid-template-rows: repeat(3, min-content);
+  padding: 140px 187px;
+  justify-content: center;
 }
 
 .concept__title {
@@ -20,19 +22,32 @@
   font-family: vars.$secondary-font;
   font-weight: 500;
   line-height: 1.3;
+  color: vars.$brand-color;
   font-size: 45px;
+  padding-bottom: 40px;
   text-transform: uppercase;
-  letter-spacing: -2;
-
-  &__title-accent--italic {
-    font-style: italic;
-  }
+  letter-spacing: -2px;
+}
+.concept__title--italic {
+  font-style: italic;
 }
 
 .concept__title-text {
+  font-family: vars.$primary-font;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.24;
+  color: vars.$brand-color;
+  opacity: 0.8;
   grid-area: 1 / 2 / 2 / 3;
 }
 
 .concept__title-description {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.24;
+  opacity: 0.8;
+  color: vars.$brand-color;
+  font-family: vars.$primary-font;
   grid-area: 3 / 2 / 4 / 3;
 }

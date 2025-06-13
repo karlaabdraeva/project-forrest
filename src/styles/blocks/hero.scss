@@ -17,6 +17,21 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity 1.2s ease, transform 1.5s ease;
+  animation: appearAndScaleDown 1.6s ease forwards;
+}
+
+@keyframes appearAndScaleDown {
+  0% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .hero__container {

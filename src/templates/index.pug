@@ -49,22 +49,28 @@ html.page(lang='ru-RU')
       section.concept.section-light
         .concept__container.container
           h2.concept__title.title
-            span.concept__title-accent.concept__title-accent--italic Достаточно
+            span.concept__title-accent
+              span.concept__title--italic Достаточно
               |  найти
               br
               |  одну опорную стену
-            p.concept__title-text Вертикальное озеленение – это инновационный способ интеграции природы в городскую среду.
+            p.concept__title-text Вертикальное озеленение – это инновационный способ интеграции природы<br> в городскую среду.
             p.concept__title-description Эти живые конструкции, состоящие из растений, закреплённых на вертикальных поверхностях, не только преображают внешний вид зданий и интерьеров,<br> но и приносят ощутимую пользу: улучшают качество воздуха, снижают температуру окружающей среды, создают звукоизоляцию и, конечно, дарят<br> эстетическое удовольствие, превращая бетонные стены в цветущие оазисы.
       section.support
         .support__container.container
-          h3.support__title
-            span.support__title-accent Ежемесячная
-            br
-            | Поддержка от нас
-          p.support__subtitle Ежемесячно проверяем состояние растений,<br> бережно чистим от пыли и при необходимости<br> заменяем растения.
-          a.consultation__link(href="#")
-            span.consultation__link-text Консультация
-          picture
-            source(type="image/webp" srcset="../images/balcony-support2x.webp")
-            source(type="image/webp" srcset="../images/balcony-support2x.jpg")
-            img(class="support__img" src="../images/balcony-support2x.jpg" alt="Фото балконов с растениями" width="960" height="700")
+          .support__text-container
+            h3.support__title
+              span.support__title-accent Ежемесячная
+              br
+              | Поддержка от нас
+            p.support__subtitle Ежемесячно проверяем состояние растений,<br> бережно чистим от пыли и при необходимости<br> заменяем растения.
+          .support__img-container
+            picture
+              source(type="image/webp" srcset="../images/balcony-support2x.webp")
+              source(type="image/webp" srcset="../images/balcony-support2x.jpg")
+              img(class="support__img" src="../images/balcony-support2x.jpg" alt="Фото балконов с растениями" width="960" height="700")
+          .support__link-container
+            a.support__link(href="#")
+              span.support__icon-container
+                span.support__link-icon
+              span.support__link-text Консультация
