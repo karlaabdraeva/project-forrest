@@ -51,3 +51,14 @@
   font-family: vars.$primary-font;
   grid-area: 3 / 2 / 4 / 3;
 }
+
+.concept__line-wrapper {
+  display: block;
+  overflow: hidden;
+}
+
+.concept__line {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+}

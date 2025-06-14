@@ -31,6 +31,16 @@
   }
 }
 
+.header--dark {
+  .logo::before {
+    border-color: vars.$brand-color;
+  }
+
+  .logo__text {
+    color: vars.$brand-color;
+  }
+}
+
 .logo__text {
   font-family: vars.$secondary-font;
   color: vars.$main-text-color;
@@ -38,8 +48,4 @@
   line-height: 100%;
   letter-spacing: 1px;
   margin-left: 10px;
-
-  &--dark {
-    color: vars.$brand-color;
-  }
 }

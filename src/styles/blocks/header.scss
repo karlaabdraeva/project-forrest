@@ -2,7 +2,7 @@
 
 .header {
   position: fixed;
-  color: vars.$main-text-color;
+  color: vars.$brand-color-light;
   width: 100%;
   top: 0;
   left: 0;
@@ -11,6 +11,26 @@
   opacity: 0;
   animation: fadeInHeader 1s ease-out forwards;
   animation-delay: 0.8s;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  .logo__text,
+  .nav__link,
+  .toggle-button {
+    transition: color 0.3s ease, background-image 0.3s ease;
+    color: vars.$brand-color-light;
+  }
+
+  &--dark {
+    .logo__text,
+    .nav__link,
+    .toggle-button {
+      color: vars.$brand-color;
+    }
+
+    .toggle-button {
+      background-image: url("../icons/dark-burger-icon.svg");
+    }
+  }
 }
 
 @keyframes fadeInHeader {

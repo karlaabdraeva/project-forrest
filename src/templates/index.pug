@@ -10,7 +10,7 @@ html.page(lang='ru-RU')
     link(rel="preload" href="../fonts/Cormorant-Garamond/cormorant-garamond-v20-cyrillic_latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous")
     link(rel="preload" href="../fonts/Cormorant-Garamond/cormorant-garamond-v20-cyrillic_latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous")
   body
-    header.header
+    header.header#site-header
       .header__container.container
         .header__navigation
           .header__logo-container
@@ -33,8 +33,9 @@ html.page(lang='ru-RU')
           button.header__toggle.toggle-button(type="button")
             span.visually-hidden Открыть меню
     main.index__page
-      section.hero
+      section.hero(data-theme="dark")
         .hero__image-container
+          .hero__overlay
           picture
             source(type="image/webp" srcset="../images/hero-background2x.webp")
             source(type="image/jpeg" srcset="../images/hero-background2x.jpg")
@@ -44,17 +45,18 @@ html.page(lang='ru-RU')
             span.hero__line Превращаем окружение
             span.hero__line.hero__title-accent в живые сады
           p.hero__subtitle#hero-subtitle Вертикальное озеленение для бизнеса. Преображаем бизнес центры,<br> ТЦ, отели, рестораны и другие коммерческие помещения.
-      section.concept.section-light
+      section.concept.section-light(data-theme="light")
         .concept__container.container
           h2.concept__title.title
             span.concept__title-accent
-              span.concept__title--italic Достаточно
-              |  найти
-              br
-              |  одну опорную стену
+              span.concept__line-wrapper
+                span.concept__line
+                  span.concept__title--italic Достаточно
+                  |  найти<br>
+                  span.concept_line одну опорную стену
             p.concept__title-text Вертикальное озеленение – это инновационный способ интеграции природы<br> в городскую среду.
             p.concept__title-description Эти живые конструкции, состоящие из растений, закреплённых на вертикальных поверхностях, не только преображают внешний вид зданий и интерьеров,<br> но и приносят ощутимую пользу: улучшают качество воздуха, снижают температуру окружающей среды, создают звукоизоляцию и, конечно, дарят<br> эстетическое удовольствие, превращая бетонные стены в цветущие оазисы.
-      section.support
+      section.support(data-theme="dark")
         .support__container.container
           .support__text-container
             h3.support__title
