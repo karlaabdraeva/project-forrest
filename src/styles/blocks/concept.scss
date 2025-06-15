@@ -5,7 +5,7 @@
   align-items: center;
   grid-template-columns: 187px 1546px 187px;
   grid-template-rows: repeat(3, min-content);
-  padding: 140px 187px;
+  padding: 74px 187px 122px;
   justify-content: center;
 }
 
@@ -14,6 +14,7 @@
   grid-template-columns: 763px 763px;
   grid-template-rows: repeat(3, min-content);
   align-items: center;
+  margin: 0;
   grid-area: 2 / 2 / 3 / 2;
 }
 
@@ -39,6 +40,7 @@
   line-height: 1.24;
   color: vars.$brand-color;
   opacity: 0.8;
+  padding: 30px 21px 0 27px;
   grid-area: 1 / 2 / 2 / 3;
 }
 
@@ -47,9 +49,10 @@
   font-size: 20px;
   line-height: 1.24;
   opacity: 0.8;
+  padding: 0 0 0 27px;
   color: vars.$brand-color;
   font-family: vars.$primary-font;
-  grid-area: 3 / 2 / 4 / 3;
+  grid-area: 3 / 2 / 4 / 6;
 }
 
 .concept__line-wrapper {
