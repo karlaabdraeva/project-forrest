@@ -56,7 +56,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex: 1 1 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 100%;
 }
 
 .header__logo-container {
