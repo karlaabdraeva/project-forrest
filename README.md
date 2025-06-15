@@ -4,17 +4,33 @@
 
 ## Технологии
 
-- Webpack — сборка проекта  
-- TypeScript — логика  
-- SCSS / SASS — стилизация  
-- Pug — шаблонизатор (HTML)  
-- GSAP — анимации  
-- Intersection Observer — взаимодействие со скроллом  
+- Webpack — сборка проекта
+- TypeScript — логика
+- SCSS / SASS — стилизация
+- Pug — шаблонизатор (HTML)
+- GSAP — анимации
+- Intersection Observer — взаимодействие со скроллом
 - Не используются jQuery, Bootstrap, Tailwind и другие UI-фреймворки
 
 ---
 
-## Установка и запуск
+## Установка
+
+```bash
+npm install
+```
+
+## Сборка проекта
+
+```bash
+npm run build
+```
+
+## Запуск в режиме разработки
+
+```bash
+npm run dev
+```
 
 ### 1. Клонировать репозиторий
 
