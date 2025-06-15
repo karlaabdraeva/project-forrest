@@ -13,8 +13,6 @@ const heroImgElement = heroElement?.querySelector('.hero__img') as HTMLElement |
 const conceptElement = document.querySelector('.concept') as HTMLElement | null;
 const conceptTitleLines = conceptElement?.querySelectorAll('.concept__line') ?? [];
 const conceptTitleElements = conceptElement?.querySelectorAll('.concept__title');
-const conceptTextElement = conceptElement?.querySelector('.concept__title-text') as HTMLElement | null;
-const conceptDescriptionElement = conceptElement?.querySelector('.concept__title-description') as HTMLElement | null;
 const supportElement = document.querySelector('.support') as HTMLElement | null;
 const supportTitleElement = supportElement?.querySelector('.support__title') as HTMLElement | null;
 const supportSubtitleElement = supportElement?.querySelector('.support__subtitle') as HTMLElement | null;
@@ -96,11 +94,10 @@ if (heroElement && heroOverlayElement && heroTitleElement && heroSubtitleElement
   });
 }
 
-if (conceptElement && conceptTitleElements && conceptTitleLines.length && conceptTextElement && conceptDescriptionElement) {
+if (conceptElement && conceptTitleElements && conceptTitleLines.length) {
 
   gsap.set(conceptTitleElements, { y: '100%', opacity: 0 });
 
-  // Анимация появления строк заголовка
   gsap.fromTo(conceptTitleElements,
     { y: '100%', opacity: 1 },
     {
