@@ -9,8 +9,6 @@
 - SCSS / SASS — стилизация
 - Pug — шаблонизатор (HTML)
 - GSAP — анимации
-- Intersection Observer — взаимодействие со скроллом
-- Не используются jQuery, Bootstrap, Tailwind и другие UI-фреймворки
 
 ---
 
